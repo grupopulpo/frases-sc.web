@@ -47,6 +47,10 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/background'),
         ],
+         'phrases' => [
+            'driver' => 'local',
+            'root' => storage_path('app/phrases'),
+        ],
 
         'public' => [
             'driver' => 'local',

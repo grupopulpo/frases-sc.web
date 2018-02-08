@@ -19,7 +19,13 @@ class Phrase extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('content',255);
             $table->string('fonts',255);
-            $table->string('color_text');
+            $table->string('color_text',17);
+                        $table->string('url_phrase');
+                         $table->integer('approved')->unsigned();
+            $table->integer('user_approved')->unsigned()->nullable();
+            $table->datetime('date_approved')->nullable();
+            $table->foreign('user_approved')->references('id')->on('users');
+
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('background_id')->references('id')->on('backgrounds');

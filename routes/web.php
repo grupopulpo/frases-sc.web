@@ -19,6 +19,12 @@ $router->get('/', function () use ($router) {
 $router->group(['middleware'=>'auth:api'],function() use($router){
 	$router->post('/v1/api-update-user','MainController@updateUser');
 	
-	$router->get('/v1/api-background/{name}','MainController@getBackground');
+	$router->get('/v1/api-background/{id}','MainController@getBackground');
 	$router->post('/v1/api-background-save','MainController@saveBackground');
+
+	$router->post('/v1/api-phrases-get/{type}','MainController@getPhrases');
+	$router->post('/v1/api-phrases-save','MainController@savePhrase');
+	$router->get('/v1/api-phrase-postal/{id}','MainController@getPhrase');
+	$router->post('/v1/api-phrase-approved/{id}','MainController@approvedPhrase');
+
 });

@@ -9,4 +9,9 @@ class Background extends Model{
 	protected $table='backgrounds';
 	 protected $fillable = [
         'name','url'];
+
+
+	public function phrases(){
+		return $this->hasMany(Prase::class,'background_id');
+	}
 }

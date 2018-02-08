@@ -36,4 +36,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
             $this->attributes['password'] =  (new BcryptHasher())->make($password);
         }
+
+        public function userCreates(){
+        return $this->hasMany(Phrase::class,'user_id');
+    }
+  
+    public function phraseApproveds(){
+        return $this->belongsTo(Phrase::class,'user_approved');
+    }
 }
