@@ -17,9 +17,10 @@ class MainController extends Controller
              'avatar'=>'required',
              'age'=>'required|between:0,110',
              'email' => 'required|email|unique:users', 
-             'password' => 'required|min:6'
+             'password' => 'required|min:6',
+             'rol' => 'required|in:gues'
         ]);
-        User::create($request->only(['name','user_sid','avatar','age','email','password']));
+        User::create($request->only(['name','user_sid','avatar','age','email','password','rol']));
             return $this->success('proceso ejecutado correctamente', 200);
     }
 
