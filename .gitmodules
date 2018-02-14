@@ -1,0 +1,3 @@
+[submodule "frases-sc.web-front"]
+	path = frases-sc.web-front
+	url = https://grupopulpo.visualstudio.com/Frases%20San%20Carlos/_git/frases-sc.web-front
