@@ -11,7 +11,7 @@
 |
 */
 
-$app = require __DIR__.'\..\bootstrap\app.php';
+$app = require __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'bootstrap'.DIRECTORY_SEPARATOR.'app.php';
 
 /*
 |--------------------------------------------------------------------------
